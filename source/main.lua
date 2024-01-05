@@ -8,20 +8,15 @@ end
 local stage = display.getCurrentStage()
 
 local config = {
-	-- размер проекта
+	-- Project Size
 	width = 640,
 	height = 1136,
 
-	-- обновляемые параметры
+	-- Autoupdate variables
 	left = 0,
 	right = 0,
 	top = 0,
 	bottom = 0,
-
-	--[[
-		возвращают размер всей области окна
-		в актуальных для приложения размерах
-	]]
 	contentWidth = 0,
 	contentHeigth = 0
 }
@@ -78,10 +73,10 @@ onResize()
 Runtime:addEventListener("resize", onResize)
 
 --================================================================================
--- Создание объектов
+-- Create Object
 
 ----------------------------------------------------------------------------------
-local rectRed = display.newRect(config.width/2, config.height/2, 1920*4, 1920*4)
+local rectRed = display.newRect(config.width/2, config.height/2, config.width, config.height)
 function rectRed:onResize()
 	rectRed.width = config.contentWidth - 50
 	rectRed.height = config.contentHeight - 50
