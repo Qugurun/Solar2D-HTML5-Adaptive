@@ -76,12 +76,12 @@ Runtime:addEventListener("resize", onResize)
 -- Create Object
 
 ----------------------------------------------------------------------------------
-local rectRed = display.newRect(config.width/2, config.height/2, config.width, config.height)
-function rectRed:onResize()
-	rectRed.width = config.contentWidth - 50
-	rectRed.height = config.contentHeight - 50
+local rectPurple = display.newRect(config.width/2, config.height/2, config.width, config.height)
+function rectPurple:onResize()
+	self.width = config.contentWidth - 50
+	self.height = config.contentHeight - 50
 end
-rectRed:setFillColor(1,0,1)
+rectPurple:setFillColor(1,0,1)
 
 ----------------------------------------------------------------------------------
 local rectRed = display.newRect(0, 0, config.width, config.height)
